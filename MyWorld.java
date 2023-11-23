@@ -27,11 +27,14 @@ public class MyWorld extends World
         score = new Label(0,50);
         addObject(score,50, 50);
     }
+    public void gameover(){
+        Label gameOver = new Label ("Game Over",100);
+        addObject(gameOver,300,200);
+    }
     public void increase(){
         theScore++;
         score.setValue(theScore);
     }
-    
         
     public void creatApple(){
         Apple apple = new Apple();

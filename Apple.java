@@ -16,8 +16,8 @@ public class Apple extends Actor
     {
         setLocation(getX(), getY() + 2);
         MyWorld world = (MyWorld) getWorld();
-        if(getY() >= world.getHeight()){
-            world.gameover();
+        if(getY() >= world.getHeight()-10){
+            world.gameOver();
             world.removeObject(this);
         }
     }

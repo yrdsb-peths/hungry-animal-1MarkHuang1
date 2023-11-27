@@ -27,9 +27,9 @@ public class MyWorld extends World
         score = new Label(0,50);
         addObject(score,50, 50);
     }
-    public void gameover(){
+    public void gameOver(){
         Label gameOver = new Label ("Game Over",100);
-        addObject(gameOver,300,200);
+        addObject(gameOver,getWidth()/2,getHeight()/2);
     }
     public void increase(){
         theScore++;

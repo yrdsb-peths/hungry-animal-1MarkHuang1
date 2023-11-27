@@ -16,14 +16,23 @@ public class Elephant extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
+            if(Greenfoot.isKeyDown("space")){
+                move(-5);
+            }
+            else{
             move(-1);
+            }
         }
         if(Greenfoot.isKeyDown("right"))
         {
+            if (Greenfoot.isKeyDown("space")){
+                move(5);
+            }
+            else{
             move(1);
+            }
         }
         eat();
-        
     }
     
     public void eat(){

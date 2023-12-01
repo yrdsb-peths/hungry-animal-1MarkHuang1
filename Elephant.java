@@ -13,25 +13,51 @@ public class Elephant extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage[] idle = new GreenfootImage[8];
+    GreenfootImage[] idleRight = new GreenfootImage[8];
+    GreenfootImage[] idleLeft = new GreenfootImage[8];
+
+    String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
     
     public Elephant(){
-        for (int i =0; i < idle.length; i++){
-            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        for (int i =0; i < idleRight.length; i++){
+            idleRight[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idleRight[i].scale(50,50);
         }
-        setImage(idle[0]);
+        
+        for (int i =0; i < idleLeft.length; i++){
+            idleLeft[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idleLeft[i].mirrorHorizontally();
+            idleLeft[i].scale(50,50);
+        }
+        
+        animationTimer.mark();
+        // initial 
+        setImage(idleRight[0]);
     }
     //animate elephant
     int imageIndex = 0;
     public void animateElephant(){
-        setImage(idle[imageIndex]);
-        imageIndex = (imageIndex + 1) % idle.length;
+        if(animationTimer.millisElapsed() < 50){
+            return;
+        }
+        animationTimer.mark();
+        
+        if(facing.equals("right")){
+            setImage(idleRight[imageIndex]);
+            imageIndex = (imageIndex + 1) % idleRight.length;
+        }
+        else{
+            setImage(idleLeft[imageIndex]);
+            imageIndex = (imageIndex + 1) % idleLeft.length;
+        }
     }
     
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
         {
+            facing = "left";
             if(Greenfoot.isKeyDown("space")){
                 move(-5);
             }
@@ -41,6 +67,7 @@ public class Elephant extends Actor
         }
         if(Greenfoot.isKeyDown("right"))
         {
+            facing = "right";
             if (Greenfoot.isKeyDown("space")){
                 move(5);
             }

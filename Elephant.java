@@ -13,6 +13,21 @@ public class Elephant extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    GreenfootImage[] idle = new GreenfootImage[8];
+    
+    public Elephant(){
+        for (int i =0; i < idle.length; i++){
+            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
+    //animate elephant
+    int imageIndex = 0;
+    public void animateElephant(){
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
@@ -34,6 +49,8 @@ public class Elephant extends Actor
             }
         }
         eat();
+        
+        animateElephant();
     }
     
     public void eat(){

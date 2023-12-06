@@ -12,6 +12,8 @@ public class MyWorld extends World
     SimpleTimer time = new SimpleTimer();
     Label score;
     int level = 1;
+    boolean isGameOver = false;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -29,14 +31,21 @@ public class MyWorld extends World
         score = new Label(0,50);
         addObject(score,getWidth()/2, 50);
     }
-    public void gameOver(){
-        Label gameOver = new Label ("Game Over",100);
-        addObject(gameOver,getWidth()/2,getHeight()/2);
-        time.mark();
-        if (time.millisElapsed() < 10000 && Greenfoot.isKeyDown("b")){            
+    
+    public void act() {
+        if (isGameOver && Greenfoot.isKeyDown("b")){            
             Greenfoot.setWorld(new TitleScreen()); 
         }
     }
+    
+    public void gameOver(){
+        isGameOver = true;
+        Label gameOver = new Label ("Game Over",100);
+        addObject(gameOver,getWidth()/2,getHeight()/2);
+        time.mark();
+        
+    }
+    
     public void increase(){
         theScore++;
         score.setValue(theScore);

@@ -12,3 +12,8 @@ This particular repository is the starting template for the Hungry Elephant tuto
 [Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
 
 [Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
+
+
+What i added to ontop of the 3 videos:
+- when 'space' is pressed during game, the elephant will move faster.
+- when game is finished, press 'b' will bring user back to menu. 

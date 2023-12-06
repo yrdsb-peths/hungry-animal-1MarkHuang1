@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public int theScore = 0;
+    SimpleTimer time = new SimpleTimer();
     Label score;
     int level = 1;
     /**
@@ -18,7 +19,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(607, 391, 1);
         //Elephant
         Elephant elephant = new Elephant();
         addObject(elephant, 300,300);
@@ -31,6 +32,10 @@ public class MyWorld extends World
     public void gameOver(){
         Label gameOver = new Label ("Game Over",100);
         addObject(gameOver,getWidth()/2,getHeight()/2);
+        time.mark();
+        if (time.millisElapsed() < 10000 && Greenfoot.isKeyDown("b")){            
+            Greenfoot.setWorld(new TitleScreen()); 
+        }
     }
     public void increase(){
         theScore++;

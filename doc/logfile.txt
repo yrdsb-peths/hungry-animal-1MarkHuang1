@@ -1,15 +1,8 @@
-Class documentation
+Project documentation
 <---- javadoc command: ---->
 C:\Program Files\Greenfoot\jdk\bin\javadoc.exe
--author
--version
--nodeprecated
--protected
--Xdoclint:none
--noindex
--notree
--nohelp
--nonavbar
+-sourcepath
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1
 -source
 17
 -classpath
@@ -20,16 +13,58 @@ C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc
 windows-1252
 -charset
 windows-1252
-C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\Elephant.java
+-doctitle
+hungry-animal-1MarkHuang1
+-windowtitle
+hungry-animal-1MarkHuang1
+-author
+-version
+-nodeprecated
+-protected
+-Xdoclint:none
+-link
+https://docs.oracle.com/en/java/javase/17/docs/api/
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/Apple.java
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/SimpleTimer.java
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/Elephant.java
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/Label.java
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/MyWorld.java
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1/TitleScreen.java
 <---- end of javadoc command ---->
+Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\Apple.java...
+Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\SimpleTimer.java...
 Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\Elephant.java...
+Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\Label.java...
+Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\MyWorld.java...
+Loading source file C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\TitleScreen.java...
 Constructing Javadoc information...
 warning: unknown enum constant Tag.Any
   reason: class file for threadchecker.Tag not found
 warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+Building index for all the packages and classes...
 Standard Doclet version 17.0.4.1+1
 Building tree for all the packages and classes...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\Apple.html...
 Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\Elephant.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\Label.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\MyWorld.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\SimpleTimer.html...
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\SimpleTimer.java:24: warning: invalid input: '&'
+ * if (timer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space"))
+                                    ^
+C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\SimpleTimer.java:24: warning: invalid input: '&'
+ * if (timer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space"))
+                                     ^
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\TitleScreen.html...
 Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\package-summary.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\package-tree.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\overview-tree.html...
+Building index for all classes...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\allclasses-index.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\allpackages-index.html...
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\index-all.html...
 Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\index.html...
-2 warnings
+Generating C:\Users\huang\OneDrive\Documents\GitHub\hungry-animal-1MarkHuang1\doc\help-doc.html...
+6 warnings

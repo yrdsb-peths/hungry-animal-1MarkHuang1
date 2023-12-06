@@ -16,4 +16,5 @@ This particular repository is the starting template for the Hungry Elephant tuto
 
 What i added to ontop of the 3 videos:
 - when 'space' is pressed during game, the elephant will move faster.
-- when game is finished, press 'b' will bring user back to menu. 
+- when game is finished, press 'b' will bring user back to menu.
+- A life system (3 life in total)

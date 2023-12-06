@@ -15,11 +15,18 @@ public class Apple extends Actor
      */
     public void act()
     {
-        setLocation(getX(), getY() + 2);
+        setLocation(getX(), getY() + speed);
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight()-10){
-            world.gameOver();
             world.removeObject(this);
+            world.lifeCount();
+            if(world.life <= 0){
+                world.gameOver();
+            }
+            else{
+                world.createApple();
+            }
+            
         }
     }
     public void setSpeed(int spd){

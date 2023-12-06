@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public int theScore = 0;
+    public int life = 3;
     SimpleTimer time = new SimpleTimer();
     Label score;
+    Label lifenum;
     int level = 1;
-    boolean isGameOver = false;
+    public boolean isGameOver = false;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -26,13 +28,25 @@ public class MyWorld extends World
         Elephant elephant = new Elephant();
         addObject(elephant, 300,300);
         //Apple
-        creatApple();
+        createApple();
         //Score Label 
+        Label scoreLabel = new Label("Score:",50);
+        addObject(scoreLabel,100,50);
         score = new Label(0,50);
-        addObject(score,getWidth()/2, 50);
+        addObject(score,200, 50);
+        // life label
+        lifenum = new Label(0,50);
+        lifenum.setValue(life);
+        addObject(lifenum,490,50);
+        //health icon 
+        Health health = new Health();
+        addObject(health,550,50);
     }
     
     public void act() {
+        if (life ==0){
+            gameOver();
+        }
         if (isGameOver && Greenfoot.isKeyDown("b")){            
             Greenfoot.setWorld(new TitleScreen()); 
         }
@@ -54,8 +68,13 @@ public class MyWorld extends World
             level += 1;
         }
     }
+   
+    public void lifeCount(){
+        life = life -1;
+        lifenum.setValue(life);
+    }
         
-    public void creatApple(){
+    public void createApple(){
         Apple apple = new Apple();
         apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);

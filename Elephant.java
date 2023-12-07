@@ -19,6 +19,9 @@ public class Elephant extends Actor
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
     
+    /**
+     * If the user presses the Left arrow key, the elephant actor will be flipped
+     */
     public Elephant(){
         for (int i =0; i < idleRight.length; i++){
             idleRight[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
@@ -35,7 +38,9 @@ public class Elephant extends Actor
         // initial 
         setImage(idleRight[0]);
     }
-    //animate elephant
+    /**
+     * Animation for the elepahnt
+     */
     int imageIndex = 0;
     public void animateElephant(){
         if(animationTimer.millisElapsed() < 50){
@@ -53,6 +58,9 @@ public class Elephant extends Actor
         }
     }
     
+    /**
+     * code is played when the game starts
+     */
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
@@ -80,6 +88,9 @@ public class Elephant extends Actor
         animateElephant();
     }
     
+    /**
+     * This segment is played whenever the elephant touches an apple
+     */
     public void eat(){
         if (isTouching(Apple.class)){
             removeTouching(Apple.class);

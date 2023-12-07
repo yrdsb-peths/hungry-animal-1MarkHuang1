@@ -56,6 +56,8 @@ public class MyWorld extends World
         isGameOver = true;
         Label gameOver = new Label ("Game Over",100);
         addObject(gameOver,getWidth()/2,getHeight()/2);
+        Label instructions = new Label ("Press \"b\" to restart", 60);
+        addObject(instructions, getWidth()/2, getHeight()/2+50);
         time.mark();
         
     }
